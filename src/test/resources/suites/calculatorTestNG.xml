@@ -1,0 +1,92 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Second suite" verbose="1" parallel="methods" thread-count="2">
+    <test name="Sum">
+        <classes>
+            <class name="com.epam.moduleTestNG.SumWholeCalculatorTest"></class>
+            <class name="com.epam.moduleTestNG.SumFracCalculatorTest"></class>
+        </classes>
+    </test>
+    <test name="Subtraction">
+        <classes>
+            <class name="com.epam.moduleTestNG.SubWholeCalculatorTest"></class>
+            <class name="com.epam.moduleTestNG.SubFracCalculatorTest"></class>
+        </classes>
+    </test>
+    <test name="Multiplication">
+        <classes>
+            <class name="com.epam.moduleTestNG.MultWholeCalculatorTest"></class>
+            <class name="com.epam.moduleTestNG.MultFracCalculatorTest"></class>
+        </classes>
+    </test>
+    <test name="Division">
+        <classes>
+            <class name="com.epam.moduleTestNG.DivWholeCalculatorTest"></class>
+            <class name="com.epam.moduleTestNG.DivFracCalculatorTest"></class>
+        </classes>
+    </test>
+    <test name="Sqrt(0)">
+        <parameter name="a" value="0"/>
+        <parameter name="expected" value="0"/>
+        <classes>
+            <class name="com.epam.moduleTestNG.SqrtCalculatorTest"></class>
+        </classes>
+    </test>
+    <test name="Sqrt(9)">
+        <parameter name="a" value="9"/>
+        <parameter name="expected" value="3"/>
+        <classes>
+            <class name="com.epam.moduleTestNG.SqrtCalculatorTest"></class>
+        </classes>
+    </test>
+    <test name="Sqrt(1)">
+        <groups>
+            <run>
+                <exclude name="one"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.epam.moduleTestNG.SqrtCalculatorTest"></class>
+        </classes>
+    </test>
+    <test name="Sin">
+        <classes>
+            <class name="com.epam.moduleTestNG.SinCalculatorTest"/>
+        </classes>
+    </test>
+    <test name="Cos">
+        <classes>
+            <class name="com.epam.moduleTestNG.CosCalculatorTest"/>
+        </classes>
+    </test>
+    <test name="Ctg">
+        <classes>
+            <class name="com.epam.moduleTestNG.CtgCalculatorTest"/>
+        </classes>
+    </test>
+    <test name="Tg">
+        <classes>
+            <class name="com.epam.moduleTestNG.TgCalculatorTest"/>
+        </classes>
+    </test>
+    <test name="checkNegative">
+        <classes>
+            <class name="com.epam.moduleTestNG.isNegativeCalculatorTest"/>
+        </classes>
+    </test>
+    <test name="checkPositive">
+        <classes>
+            <class name="com.epam.moduleTestNG.isPositiveCalculatorTest"/>
+        </classes>
+    </test>
+    <test name="Pow1">
+        <classes>
+            <class name="com.epam.moduleTestNG.PowCalculatorTest"/>
+        </classes>
+    </test>
+    <test name="Pow2">
+        <classes>
+            <class name="com.epam.moduleTestNG.PowCalculatorTestWithParam"/>
+        </classes>
+    </test>
+
+</suite>
