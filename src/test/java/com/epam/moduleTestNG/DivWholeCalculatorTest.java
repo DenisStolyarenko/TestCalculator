@@ -39,4 +39,6 @@ public class DivWholeCalculatorTest extends BaseCalculatorTest {
         long result = calculator.div(a, 0);
         Assert.assertEquals(result, expected, "Divide by zero");
     }
+
+
 }

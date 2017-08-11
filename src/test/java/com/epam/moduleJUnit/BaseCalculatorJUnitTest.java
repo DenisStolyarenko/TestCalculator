@@ -4,9 +4,6 @@ import com.epam.tat.module4.Calculator;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 public class BaseCalculatorJUnitTest {
     public static Calculator calculator;
 

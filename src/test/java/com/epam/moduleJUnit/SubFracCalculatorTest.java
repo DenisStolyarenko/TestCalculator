@@ -14,7 +14,7 @@ public class SubFracCalculatorTest extends BaseCalculatorJUnitTest {
     private double b;
     private double expected;
 
-    public SubFracCalculatorTest(long a, long b, long expected) {
+    public SubFracCalculatorTest(double a, double b, double expected) {
         this.a = a;
         this.b = b;
         this.expected = expected;

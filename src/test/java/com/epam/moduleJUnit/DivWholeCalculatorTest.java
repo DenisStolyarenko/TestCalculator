@@ -1,7 +1,6 @@
 package com.epam.moduleJUnit;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -32,15 +31,15 @@ public class DivWholeCalculatorTest extends BaseCalculatorJUnitTest {
     }
 
     @Test
-    public void testIntDiv(){
+    public void testIntDiv() {
         double result = calculator.div(a, b);
         Assert.assertEquals(a + " / " + b + " is NOT equal " + result, expected, result, 0);
     }
 
-    @Ignore
-    @Test
-    public void testDivByZero(){
+    @Test(expected = NumberFormatException.class)
+    public void testExceptionDivByZero() {
         long result = calculator.div(a, 0);
-        Assert.assertEquals("Divide by zero", expected, result, 0);
+        Assert.assertEquals("Divide by zero", expected, result);
     }
+
 }
