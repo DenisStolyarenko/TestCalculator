@@ -16,7 +16,7 @@ public class TestNGRunner {
         XmlSuite suite = new XmlSuite();
         suite.setName("Calculator");
         List<String> files = new ArrayList<String>();
-        files.addAll(new ArrayList<String>(){{add("./src/test/resources/suites/calculatorTestNG.xml");}});
+        files.addAll(new ArrayList<String>(){{add("./src/test/java/com/epam/suites/calculatorTestNG.xml");}});
         suite.setSuiteFiles(files);
 
         suite.setParallel(XmlSuite.ParallelMode.METHODS);
